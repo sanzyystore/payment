@@ -1,0 +1,246 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #000;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* LOGIN PAGE */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-box {
+  background: #111;
+  padding: 40px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 400% 400%;
+  animation: rgbBorder 6s linear infinite;
+  z-index: 0;
+}
+
+.login-box h2 {
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.login-box button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #28a745;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.login-box button:hover {
+  background: #218838;
+}
+
+@keyframes rgbBorder {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.login-box::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  right: 4px;
+  bottom: 4px;
+  background: #111;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+/* PAYMENT PAGE */
+.container {
+  max-width: 600px;
+  margin: 60px auto;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.1);
+}
+
+.profile {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Biar konten di tengah */
+  justify-content: center;
+}
+
+/* Bungkus foto biar border RGB tetap rapi di tengah */
+.profile img {
+  display: block;
+  margin: 0 auto;       /* pastiin di tengah */
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid transparent;
+  background: linear-gradient(45deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 400% 400%;
+  animation: rgbBorder 5s linear infinite;
+  box-shadow: 0 0 20px rgba(255,255,255,0.3);
+}
+
+/* Efek RGB pada nama */
+.profile h2 {
+  margin: 15px 0 5px;
+  font-size: 22px;
+  background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rgbText 5s linear infinite;
+}
+
+/* Animasi bergerak RGB */
+@keyframes rgbBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes rgbText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+
+.payment-method {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.payment-method h3 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: #7fffd4;
+}
+
+.number-box {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: 1px solid #333;
+  margin-bottom: 10px;
+  word-break: break-word;
+  color: #fff;
+}
+
+button.copy-btn {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: rgbButton 8s linear infinite;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+button.copy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
+@keyframes rgbButton {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.footer-note {
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+  margin-top: 25px;
+}
+
+/* Tambahan CSS untuk tombol pilihan */
+.payment-options {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.pay-btn {
+  padding: 12px 18px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(270deg, red, orange, yellow, green, cyan, blue, violet, red);
+  background-size: 600% 600%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  animation: rgbButton 8s linear infinite;
+  box-shadow: 0 0 15px rgba(255,255,255,0.2);
+  transition: transform 0.2s ease-in-out;
+}
+
+.pay-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255,255,255,0.6);
+}
+
